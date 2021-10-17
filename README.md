@@ -11,7 +11,7 @@ This Library uses the PORTB since both atMega and atTiny have this same PORT def
 
 The main aim is to make it as small as possible to fit the atTiny. This OLED Library only have font for numbers 0 to 9 for _showChar() function, If you need to display other than numbers, use the _showBitmap() function.
 
-1. sk_oled_selectPin(_pinSDA,_pinSCL) - This is optional. if not run SDA=PB0, SCL=PB1. If required different Pin is required, sk_oled_selectPin() must run before the sk_oled_begin()
+1. sk_oled_selectPin(_pinSDA,_pinSCL) - This is optional. if you do not run this function, SDA will be PB0, SCL will be PB1. If you do not wish to use PB0 and PB1, run sk_oled_selectPin(_pin_SDA, _pin_SCL) before the sk_oled_begin(), specify your new preferred pins (PB0 to PB4) in that function.
 2. sk_oled_begin() - Run this just once, before other library display functions
 3. sk_oled_clearScreen() - Clears the entire OLED screen
 4. sk_oled_showBitmap(_row,_col,_a_byt,_len,_len_idx) - display 8-bit bitmap (1-128 pixel)
@@ -57,7 +57,7 @@ After installation, you may want to try out these small test program
 8.   return 0; 
 9. }
 
-// *Without Arduino setup() and loop()
+- *Without Arduino setup() and loop()
 - Sketch uses 538 bytes (1%) of program storage space. Maximum is 32256 bytes.
 - Global variables use 26 bytes (1%) of dynamic memory, leaving 2022 bytes for local variables. Maximum is 2048 bytes.
 // For very simple Program, can potentially fit atTiny13 (with just 1000bytes program memory, 64bytes dynamic memory)
@@ -70,6 +70,6 @@ After installation, you may want to try out these small test program
 6. }
 7. void loop() {}
 
-// *With Arduino setup() and loop()
+- *With Arduino setup() and loop()
 - Sketch uses 850 bytes (2%) of program storage space. Maximum is 32256 bytes.
 - Global variables use 35 bytes (1%) of dynamic memory, leaving 2013 bytes for local variables. Maximum is 2048 bytes.
