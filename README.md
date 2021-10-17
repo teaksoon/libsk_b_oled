@@ -1,5 +1,4 @@
-This library libsk_b_oled is designed to work without using the Hardware i2c support. It uses the regular I/O Pin from PORTB to do the i2c communication. Some smaller AVR micro-controller may not have hardware support for the hardware i2c. Another use is, when you need to use two SSD1306 OLED Modules at the same time ( hardware i2c can support only one SSD1306 OLED i2c Module at a time, unless you have a SSD1306 OLED with a different i2c Address ) 
-- NOTE: This "bit bang" version may not be as reliable as the hardware i2c
+This library libsk_b_oled is designed to work without using the Hardware i2c support. It uses the regular I/O Pin from PORTB to do the i2c communication. Some smaller AVR micro-controller may not have hardware support for the hardware i2c. Another use is, when you need to use two SSD1306 OLED Modules at the same time ( hardware i2c can support only one SSD1306 OLED i2c Module at a time, unless you have a SSD1306 OLED with a different i2c Address ) his "bit bang" version may not be as reliable as the hardware i2c, somtimes we do not have choices. 
 
 - DEFAULT SDA PIN FOR ARDUINO UNO = PIN 8
 - DEFAULT SCL PIN FOR ARDUINO UNO = PIN 9 
@@ -59,9 +58,8 @@ After installation, you may want to try out these small test program
 9. }
 
 // *Without Arduino setup() and loop()
-// Sketch uses 538 bytes (1%) of program storage space. Maximum is 32256 bytes.
-// Global variables use 26 bytes (1%) of dynamic memory, leaving 2022 bytes for local variables. Maximum is 2048 bytes.
-//
+- Sketch uses 538 bytes (1%) of program storage space. Maximum is 32256 bytes.
+- Global variables use 26 bytes (1%) of dynamic memory, leaving 2022 bytes for local variables. Maximum is 2048 bytes.
 // For very simple Program, can potentially fit atTiny13 (with just 1000bytes program memory, 64bytes dynamic memory)
 
 1. #include <libsk_b_oled.h>
@@ -73,5 +71,5 @@ After installation, you may want to try out these small test program
 7. void loop() {}
 
 // *With Arduino setup() and loop()
-// Sketch uses 850 bytes (2%) of program storage space. Maximum is 32256 bytes.
-// Global variables use 35 bytes (1%) of dynamic memory, leaving 2013 bytes for local variables. Maximum is 2048 bytes.
+- Sketch uses 850 bytes (2%) of program storage space. Maximum is 32256 bytes.
+- Global variables use 35 bytes (1%) of dynamic memory, leaving 2013 bytes for local variables. Maximum is 2048 bytes.
