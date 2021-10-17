@@ -1,7 +1,7 @@
 This library libsk_b_oled is designed to work without using the Hardware i2c support. It uses the regular I/O Pin from PORTB to do the i2c communication. Some smaller AVR micro-controller may not have hardware support for the hardware i2c. Another use is, when you need to use two SSD1306 OLED Modules at the same time ( hardware i2c can support only one SSD1306 OLED i2c Module at a time, unless you have a SSD1306 OLED with a different i2c Address ). This "bit bang" version may not be as reliable as the hardware i2c, sometimes we do not have any other choices. 
 
-- DEFAULT SDA PIN FOR ARDUINO UNO = PIN 8
-- DEFAULT SCL PIN FOR ARDUINO UNO = PIN 9 
+- DEFAULT SDA PIN PB0 FOR ARDUINO UNO = PIN 8
+- DEFAULT SCL PIN PB1 FOR ARDUINO UNO = PIN 9 
 
 This Library uses the PORTB since both atMega and atTiny have this same PORT defination.
 - DDRB for Input/Output Mode 
